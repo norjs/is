@@ -131,6 +131,26 @@ describe('is', function(){
 
   });
 
+  describe('.number()', function(){
+
+	it('should return true when the value is a number', function(){
+		assert.strictEqual(true, is.number(1));
+		assert.strictEqual(true, is.number(123));
+	});
+
+	it('should return false when the value is not a number', function(){
+		// FIXME: Add missing compinations
+		assert.strictEqual(false, is.number("hello"));
+		assert.strictEqual(false, is.number({'foo':'bar'}));
+		assert.strictEqual(false, is.number(null));
+		assert.strictEqual(false, is.number(undefined));
+		assert.strictEqual(false, is.number(true));
+		assert.strictEqual(false, is.number(false));
+		assert.strictEqual(false, is.number([1,2,3,4]));
+	});
+
+  });
+
 });
 
 /* EOF */
