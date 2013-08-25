@@ -5,6 +5,50 @@ var assert = require('assert');
 
 /* */
 describe('is', function(){
+
+  describe('.undef()', function(){
+    it('should return true when the value is undefined', function(){
+      assert.strictEqual(true, is.undef(undefined));
+      assert.strictEqual(true, is.undef());
+    });
+    it('should return false when the value is not undefined', function(){
+      assert.strictEqual(false, is.undef(true));
+      assert.strictEqual(false, is.undef(false));
+      assert.strictEqual(false, is.undef(0));
+      assert.strictEqual(false, is.undef(-100));
+      assert.strictEqual(false, is.undef(200));
+      assert.strictEqual(false, is.undef('Hello World'));
+      assert.strictEqual(false, is.undef(''));
+      assert.strictEqual(false, is.undef({}));
+      assert.strictEqual(false, is.undef({'foo':'bar'}));
+      assert.strictEqual(false, is.undef([]));
+      assert.strictEqual(false, is.undef([1, 2, 3]));
+      assert.strictEqual(false, is.undef(null));
+    });
+  });
+
+  describe('.def()', function(){
+    it('should return true when the value is defined', function(){
+      assert.strictEqual(true, is.def(true));
+      assert.strictEqual(true, is.def(false));
+      assert.strictEqual(true, is.def(0));
+      assert.strictEqual(true, is.def(-100));
+      assert.strictEqual(true, is.def(200));
+      assert.strictEqual(true, is.def('Hello World'));
+      assert.strictEqual(true, is.def(''));
+      assert.strictEqual(true, is.def({}));
+      assert.strictEqual(true, is.def({'foo':'bar'}));
+      assert.strictEqual(true, is.def([]));
+      assert.strictEqual(true, is.def([1, 2, 3]));
+      assert.strictEqual(true, is.def(null));
+    });
+    it('should return false when the value is not defined', function(){
+      assert.strictEqual(false, is.def(undefined));
+      assert.strictEqual(false, is.def());
+    });
+  });
+
+
   describe('.true()', function(){
     it('should return true when the value is trueish', function(){
       assert.strictEqual(true, is.true(true));
