@@ -22,7 +22,7 @@
   "license": "MIT",
   "bugs": {
     "mail" : "info@sendanor.com",
-    "web" : "https://github.com/Sendanor/nor-is/issues"
+    "url" : "https://github.com/Sendanor/nor-is/issues"
   },
   "dependencies": {
   },
