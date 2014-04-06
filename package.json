@@ -1,6 +1,6 @@
 {
   "name": "nor-is",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Simple test functions for Node.js",
   "main": "lib/is.js",
   "scripts": {
