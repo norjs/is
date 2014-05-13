@@ -1,7 +1,7 @@
 {
   "name": "nor-is",
-  "version": "0.1.11",
-  "description": "Simple test functions for Node.js",
+  "version": "0.1.12",
+  "description": "Simple JavaScript test functions",
   "main": "lib/is.js",
   "scripts": {
     "test": "mocha -R spec tests/test-*.js"
