@@ -1,6 +1,6 @@
 "use strict";
 
-var is = require('../lib/is.js');
+var is = require('../src/is.js');
 var assert = require('assert');
 
 /* */
