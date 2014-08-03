@@ -1,14 +1,14 @@
 {
   "name": "nor-is",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Simple JavaScript test functions",
-  "main": "lib/is.js",
+  "main": "src/is.js",
   "scripts": {
     "test": "mocha -R spec tests/test-*.js"
   },
   "directories": {
     "test": "tests",
-    "lib": "lib"
+    "src": "src"
   },
   "repository": {
     "type": "git",
