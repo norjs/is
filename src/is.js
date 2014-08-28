@@ -7,7 +7,7 @@ is.def = function(x) {
 	return (x === undefined) ? false : true;
 };
 
-is['defined'] = is.def;
+is.defined = is.def;
 
 /* Returns true if x is null, otherwise false. */
 is.nul = function(x) {
@@ -50,7 +50,7 @@ is.obj = function(obj) {
 	return is.true( (obj && is.type(obj, 'object')) );
 };
 
-is['object'] = is.obj;
+is.object = is.obj;
 
 /* Returns true if f is a function */
 is.func = function(f) {
