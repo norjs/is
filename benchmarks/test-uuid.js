@@ -11,6 +11,7 @@ function test_using_nor_is(uuid) {
 
 var test_using_regexp = require('nor-is/check-uuid-regexp.js');
 var test_using_string = require('nor-is/check-uuid.js');
+var test_using_string_reverse = require('nor-is/check-uuid-reverse.js');
 
 /** */
 var Benchmark = require('benchmark');
@@ -23,6 +24,10 @@ suite.add('Regexp based test', function() {
 })
 .add('String based test', function() {
 	test_using_string(input);
+})
+
+.add('Reverse string based test', function() {
+	test_using_string_reverse(input);
 })
 
 .add('nor-is test', function() {

@@ -15,44 +15,45 @@ var cdash = cbuffer.charCodeAt(6);
 /** Optimized UUID test function */
 module.exports = function test_uuid(s) {
 	if( (!s) || (s.length !== 36) ) return false;
-	var i = 0, n = 0;
+	var i = 36, n = 0;
 
-	while(i !== 8) {
-		n = s.charCodeAt(i++);
+	do {
+		n = s.charCodeAt(--i);
 		if(!( ((n >= c0)&&(n <= c9)) || ((n >= ca)&&(n <= cf)) || ((n >= cA)&&(n <= cF)) )) return false;
-	}
+	} while(i !== 24);
 
-	n = s.charCodeAt(i++);
+	n = s.charCodeAt(--i);
 	if(n !== cdash) return false;
 
-	while(i !== 13) {
-		n = s.charCodeAt(i++);
+	do {
+		n = s.charCodeAt(--i);
 		if(!( ((n >= c0)&&(n <= c9)) || ((n >= ca)&&(n <= cf)) || ((n >= cA)&&(n <= cF)) )) return false;
-	}
+	} while(i !== 19);
 
-	n = s.charCodeAt(i++);
+	n = s.charCodeAt(--i);
 	if(n !== cdash) return false;
 
-	while(i !== 18) {
-		n = s.charCodeAt(i++);
-		if(!( ((n >= c0)&&(n <= c9)) || ((n >= ca)&&(n <= cf)) || ((n >= cA)&&(n <= cF)) )) return false;
-	}
 
-	n = s.charCodeAt(i++);
+	do {
+		n = s.charCodeAt(--i);
+		if(!( ((n >= c0)&&(n <= c9)) || ((n >= ca)&&(n <= cf)) || ((n >= cA)&&(n <= cF)) )) return false;
+	} while(i !== 14);
+
+	n = s.charCodeAt(--i);
 	if(n !== cdash) return false;
 
-	while(i !== 23) {
-		n = s.charCodeAt(i++);
+	do {
+		n = s.charCodeAt(--i);
 		if(!( ((n >= c0)&&(n <= c9)) || ((n >= ca)&&(n <= cf)) || ((n >= cA)&&(n <= cF)) )) return false;
-	}
+	} while(i !== 9);
 
-	n = s.charCodeAt(i++);
+	n = s.charCodeAt(--i);
 	if(n !== cdash) return false;
 
-	while(i !== 36) {
-		n = s.charCodeAt(i++);
+	do {
+		n = s.charCodeAt(--i);
 		if(!( ((n >= c0)&&(n <= c9)) || ((n >= ca)&&(n <= cf)) || ((n >= cA)&&(n <= cF)) )) return false;
-	}
+	} while(i !== 0);
 
 	return true;
 };
