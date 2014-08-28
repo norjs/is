@@ -95,7 +95,7 @@ is.number = function(obj) {
 };
 
 /* Returns true if value is a string in UUID format */
-is.uuid = require('./check-uuid-regexp.js');
+is.uuid = require('./check-uuid.js');
 
 /* Returns true if value is a string and looks like a URL (ftp://, http:// or https://) */
 is.url = function(obj) {

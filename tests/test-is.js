@@ -208,6 +208,17 @@ describe('is', function(){
 	it('should return false when the value is not a uuid', function(){
 		// FIXME: Add missing compinations
 		assert.strictEqual(false, is.uuid(""));
+		assert.strictEqual(false, is.uuid("d5137ad5"));
+		assert.strictEqual(false, is.uuid("d5137ad5-832d-4907-ac54-8a197xdd8e69"));
+		assert.strictEqual(false, is.uuid("d5137ad5-832d-4907-ac54-xxxxxxxxxxx9"));
+		assert.strictEqual(false, is.uuid("56171144-2e79-11e4-b7c9x0800279ca880"));
+		assert.strictEqual(false, is.uuid("56171144-2e79-11e4xb7c9-0800279ca880"));
+		assert.strictEqual(false, is.uuid("56171144-2e79x11e4-b7c9-0800279ca880"));
+		assert.strictEqual(false, is.uuid("56171144x2e79-11e4-b7c9-0800279ca880"));
+		assert.strictEqual(false, is.uuid("511BCCC0-2E79-11E4-9403-0800279XA880"));
+		assert.strictEqual(false, is.uuid("511BCCC0-2E79-11X4-94A3-0800279cA880"));
+		assert.strictEqual(false, is.uuid("511BCCC0-2EX9-11A4-94A3-0800279cA880"));
+		assert.strictEqual(false, is.uuid("511BCCX0-2EA9-11A4-94A3-0800279cA880"));
 		assert.strictEqual(false, is.uuid("hello"));
 		assert.strictEqual(false, is.uuid({'foo':'bar'}));
 		assert.strictEqual(false, is.uuid(null));
