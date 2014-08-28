@@ -195,6 +195,30 @@ describe('is', function(){
 
   });
 
+  describe('.uuid()', function(){
+
+	it('should return true when the value is a uuid', function(){
+		assert.strictEqual(true, is.uuid('511BCCC0-2E79-11E4-9403-0800279CA880'));
+		assert.strictEqual(true, is.uuid('511bccc0-2e79-11e4-9403-0800279ca880'));
+		assert.strictEqual(true, is.uuid('56171144-2e79-11e4-b7c9-0800279ca880'));
+		assert.strictEqual(true, is.uuid('df2801ef-5c00-4139-8d90-cd2538a3a714'));
+		assert.strictEqual(true, is.uuid('d5137ad5-832d-4907-ac54-8a1971dd8e69'));
+	});
+
+	it('should return false when the value is not a uuid', function(){
+		// FIXME: Add missing compinations
+		assert.strictEqual(false, is.uuid(""));
+		assert.strictEqual(false, is.uuid("hello"));
+		assert.strictEqual(false, is.uuid({'foo':'bar'}));
+		assert.strictEqual(false, is.uuid(null));
+		assert.strictEqual(false, is.uuid(undefined));
+		assert.strictEqual(false, is.uuid(true));
+		assert.strictEqual(false, is.uuid(false));
+		assert.strictEqual(false, is.uuid([1,2,3,4]));
+	});
+
+  });
+
 });
 
 /* EOF */
