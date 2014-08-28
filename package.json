@@ -28,9 +28,11 @@
   "dependencies": {
   },
   "devDependencies": {
+    "mocha"      : "*"
+  },
+  "optionalDependencies": {
     "lint"       : "*",
     "jshint"     : "*",
-    "benchmark"  : "*",
-    "mocha"      : "*"
+    "benchmark"  : "*"
   }
 }
