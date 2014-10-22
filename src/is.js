@@ -14,7 +14,7 @@ is.nul = function(x) {
 	return (x === null) ? true : false;
 };
 
-is.null = is.nul;
+is['null'] = is.nul;
 
 /* Returns true if x is undefined, otherwise false. */
 is.undef = function(x) {
@@ -24,9 +24,13 @@ is.undef = function(x) {
 is['undefined'] = is.undef;
 
 /* Returns true if x is trueish */
-is.true = function(x) {
+is.t = function(x) {
 	return x ? true : false;
 };
+
+/* Returns true if x is trueish */
+is['true'] = is.t;
+is.trueish = is.t;
 
 /* Returns true if boolean */
 is.boolean = function(obj) {
@@ -36,25 +40,28 @@ is.boolean = function(obj) {
 is.bool = is.boolean;
 
 /* Returns true if x is falsish */
-is.false = function(x) {
+is.f = function(x) {
 	return x ? false : true;
 };
 
+is['false'] = is.f;
+is.falseish = is.f;
+
 /* Returns true if of specified type */
 is.type = function(obj, type) {
-	return is.true( typeof obj === type );
+	return is.trueish( typeof obj === type );
 };
 
 /* Returns true if obj */
 is.obj = function(obj) {
-	return is.true( (obj && is.type(obj, 'object')) );
+	return is.trueish( (obj && is.type(obj, 'object')) );
 };
 
 is.object = is.obj;
 
 /* Returns true if f is a function */
 is.func = function(f) {
-	return is.true( (f && is.type(f, 'function')) );
+	return is.trueish( (f && is.type(f, 'function')) );
 };
 
 is['function'] = is.func;
@@ -66,7 +73,7 @@ is.callable = function(f) {
 
 /* Returns true if `obj` instance of `what` */
 is.objOf = function(obj, what) {
-	return is.true( is.obj(obj) && (obj instanceof what) );
+	return is.trueish( is.obj(obj) && (obj instanceof what) );
 };
 
 /* Returns true if array */
