@@ -136,5 +136,13 @@ is.integer = function(obj) {
 	return is.pattern(obj, /^[0-9]+$/);
 };
 
+/** Returns true if the value is NaN (Not a Number) */
+is.nan = function(obj) {
+	return isNaN(obj);
+};
+
+/** Returns true if the value is NaN (Not a Number) */
+is.NaN = is.nan;
+
 }( (typeof module === 'undefined') ? (this.nor_is = {}) : (module.exports={}) ));
 /* EOF */
