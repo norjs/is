@@ -1,6 +1,6 @@
 {
   "name": "nor-is",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "Simple JavaScript test functions",
   "main": "src/is.js",
   "scripts": {
