@@ -148,20 +148,10 @@ is.NaN = is.nan;
 is.enabled = function(v) {
 	if(is.string(v)) {
 		v = v.toLowerCase();
-		if( (v === "on")
-		 || (v === "enabled")
-		 || (v === "true")
-		 || (v === "t")
-		 || (v === "1")
-		 ) {
+		if( (v === "on") || (v === "enabled") || (v === "true") || (v === "t") || (v === "1") ) {
 			return true;
 		}
-		if( (v === "off")
-		 || (v === "disabled")
-		 || (v === "false")
-		 || (v === "f")
-		 || (v === "0")
-		 ) {
+		if( (v === "off") || (v === "disabled") || (v === "false") || (v === "f") || (v === "0") ) {
 			return false;
 		}
 	}
