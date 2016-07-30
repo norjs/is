@@ -1,6 +1,6 @@
 {
   "name": "nor-is",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "Simple JavaScript test functions",
   "main": "src/is.js",
   "scripts": {
@@ -28,11 +28,11 @@
   "dependencies": {
   },
   "devDependencies": {
-    "mocha"      : "*"
+    "mocha"      : "^2.5.3"
   },
   "optionalDependencies": {
-    "lint"       : "*",
-    "jshint"     : "*",
-    "benchmark"  : "*"
+    "lint"       : "^1.1.2",
+    "jshint"     : "^2.9.2",
+    "benchmark"  : "^2.1.1"
   }
 }
