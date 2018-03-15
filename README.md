@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/sendanor/nor-is.png?branch=master)](http://travis-ci.org/Sendanor/nor-is)
+[![Build Status](https://secure.travis-ci.org/sendanor/nor-is.png?branch=master)](http://travis-ci.org/sendanor/nor-is)
 
 nor-is
 ======
