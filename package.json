@@ -1,6 +1,6 @@
 {
   "name": "nor-is",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple JavaScript test functions",
   "main": "src/is.js",
   "scripts": {
@@ -22,17 +22,14 @@
   "author": "Jaakko-Heikki Heusala <jheusala@iki.fi>",
   "license": "MIT",
   "bugs": {
-    "mail" : "info@sendanor.com",
-    "url" : "https://github.com/sendanor/nor-is/issues"
+    "mail": "info@sendanor.com",
+    "url": "https://github.com/sendanor/nor-is/issues"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "mocha"      : "^2.5.3"
-  },
-  "optionalDependencies": {
-    "lint"       : "^1.1.2",
-    "jshint"     : "^2.9.2",
-    "benchmark"  : "^2.1.1"
+    "benchmark": "^2.1.1",
+    "jshint": "^2.9.6",
+    "lint": "^1.1.2",
+    "mocha": "^5.2.0"
   }
 }
