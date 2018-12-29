@@ -1,6 +1,6 @@
 {
-  "name": "nor-is",
-  "version": "1.0.1",
+  "name": "@norjs/is",
+  "version": "1.3.2",
   "description": "Simple JavaScript test functions",
   "main": "src/is.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sendanor/nor-is.git"
+    "url": "https://github.com/norjs/is.git"
   },
   "keywords": [
     "assert",
@@ -23,12 +23,12 @@
   "license": "MIT",
   "bugs": {
     "mail": "info@sendanor.com",
-    "url": "https://github.com/sendanor/nor-is/issues"
+    "url": "https://github.com/norjs/is/issues"
   },
   "dependencies": {},
   "devDependencies": {
     "benchmark": "^2.1.1",
-    "jshint": "^2.9.6",
+    "jshint": "^2.9.7",
     "lint": "^1.1.2",
     "mocha": "^5.2.0"
   }
