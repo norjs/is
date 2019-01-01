@@ -12,9 +12,9 @@ cov.enabled = function() {
 /* */
 cov['require'] = function(file) {
 	try {
-		return require('../src-inst/' + file);
+		return require('../../dist-inst/' + file);
 	} catch(e) {
-		return require('../src/' + file);
+		return require('../../dist/' + file);
 	}
 };
 
